@@ -23,18 +23,18 @@ public class HyperMetro {
         System.out.println();
 
         for (int i = 0; i < stationsSet.get(stationName).size() - 2; i++) {
-        System.out.println(
-                stationsSet.get(stationName)
-                        .stream()
-                        .skip(i)
-                        .limit(3)
-                        .collect(Collectors.joining(" - "))
-        );
-    }
+            System.out.println(
+                    stationsSet.get(stationName)
+                            .stream()
+                            .skip(i)
+                            .limit(3)
+                            .collect(Collectors.joining(" - "))
+            );
+        }
         System.out.println();
         stationsSet.get(stationName).removeFirst();
         stationsSet.get(stationName).removeLast();
-}
+    }
 
     public void appendStation(String line, String station) {
         if (stationsSet.isEmpty() || !stationsSet.containsKey(line)) {
